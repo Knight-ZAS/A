@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实验室管理系统</title>
+</head>
+<form action="{% url 'login' %}" method="post" id="forms" name="forms">
+    <input type="text" name="username" placeholder="请输入您账号" required="">
+    <input type="password" name="password" placeholder="请输入您的密码" required="">
+    <div class="error btns login-forms-tips" id="tips">{{ msg }}</div>
+    <div class="button">
+        <button type="submit" class="log">登录</button>
+    </div>
+    {% csrf_token %}
+</form>
+</html>
